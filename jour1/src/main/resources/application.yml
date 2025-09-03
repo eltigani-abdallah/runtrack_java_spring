@@ -1,0 +1,19 @@
+spring:
+    application:
+        name: demo
+---
+spring:
+    config:
+        activate:
+            on-profile: dev
+greeting:
+    message: "Hello world! this is DEV"
+    tools: "this is a tool from the prod"
+---
+spring:
+    config:
+        activate:
+            on-profile: prod
+greeting:
+    message: "Hello World! this is prod"
+    tools: "this is a tool from the prod "
