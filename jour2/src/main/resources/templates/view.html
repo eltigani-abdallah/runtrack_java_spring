@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <title>Thymeleaf template</title>
     </head>
     <body>
         <h1 th:text="'thymeleaf '+ ${message} + ' WEEEEEEEEEE'">
-
         </h1>
+
+        <table>
+            <tr th:each="animal: ${animalList}">
+                <td th:text="${animal.name}"></td>
+                <td th:text="${animal.age}"></td>
+                <td th:text="${animal.vax}"></td>
+            </tr>
+        </table>
+
     </body>
 </html>
